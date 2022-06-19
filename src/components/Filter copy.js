@@ -1,20 +1,20 @@
 import React from "react";
 
-/* PASS IN PROPS FROM PARENT SHOPPINGLIST. */
+
 function Filter({ onCategoryChange, onSearchChange, search }) {
-  /* EVENT LISTENER. CALL SEARCH SET STATE. */
+
+  /* PASS VALUE TO ONSEARCHCHAANGE PROP BACK TO SHOPPINGLIST PARENT */
   function handleSearchChange(event) {
-    // CALL SEARCH SET STATE IN PARENT.
-    onSearchChange(event.target.value);
+    onSearchChange(event.target.value)
   }
 
   return (
     <div className="Filter">
-      <input 
-      type="text" 
+      <input type="text" 
       name="search" 
       placeholder="Search..." 
       /* Search event listener. */
+      // onChange={onSearchChange}
       onChange={handleSearchChange}
       /* Search state. */
       value={search} 
